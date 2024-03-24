@@ -33,7 +33,19 @@
 
                     </p>
                     <div class="btn-box">
-                        <a href="" class="btn">Resume</a>
+
+                        <button id="resume-btn" class="btn">Open Resume</button>
+
+                        <div id="resume-modal" class="modal">
+                          <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe id="resume-preview" src="Resume.pdf"></iframe>
+                            <a href="Resume.pdf" download id="download-button"><i class='bx bx-download'></i>DOWNLOAD</a>
+                            <!-- Your resume content here -->
+                          </div>
+                        </div>
+
+                        <!-- <a href="Resume.pdf" class="btn">Resume</a> -->
                         <a href="#" class="btn contact-me">Contact Me</a>
                     </div>
                 </div>
@@ -371,14 +383,15 @@
     <div class="page-back">
         <h1 class="title">Contact Me</h1>
         <div class="contact-box">
-            <form action="#">
-                <input type="text" class="field" placeholder="Full Name" required>
-                <input type="email" class="field" placeholder="Email Address" required>
-                <textarea name="" id="" cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
-                <input type="submit" class="btn" value="Send Message">
+            <form action="https://formspree.io/f/mjvneqww" method="POST">
+                <input type="text" class="field" placeholder="Full Name" required name="name">
+                <input type="email" class="field" name="email" placeholder="Email Address" required>
+                <textarea name="" id="" cols="30" rows="10" class="field" name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" class="btn" value="Send Message" name="button>
             </form>
         </div>
-        <span class="number-page">6</span>
+        <br> <br>
+        <span class="number-page"></span> 
         <!-- prev button -->
         <span class="nextprev-btn back" data-page="turn-3">
             <i class='bx bx-chevron-left' ></i>

@@ -1,3 +1,19 @@
+document.getElementById("resume-btn").addEventListener("click", function() {
+    document.getElementById("resume-modal").style.display = "block";
+  });
+  
+  document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    document.getElementById("resume-modal").style.display = "none";
+  });
+  
+  window.addEventListener("click", function(event) {
+    if (event.target == document.getElementById("resume-modal")) {
+      document.getElementById("resume-modal").style.display = "none";
+    }
+  });
+  
+
+
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 pageTurnBtn.forEach((el, index) => {
     el.onclick = () => {
